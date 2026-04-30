@@ -1,0 +1,17 @@
+echo "*.o
+*.out
+*.exe
+*.log
+*.tmp
+*.swp
+*.class
+*.dll
+*.so
+*.dylib
+.vscode/
+.idea/
+" >> .gitignore
+
+git add .gitignore
+git commit -m "Adiciona .gitignore para C++"
+git push
