@@ -15,13 +15,13 @@ Os endereços podem ser a localização na memória de uma variável ou função
 A possibilidade de trabalhar diretamente com a memória permite criar programas mais eficientes.
 
 
-2. Declaração de Ponteiros
+2. Declaração de Ponteiros (sintaxe)
 
 tipo *ponterio;
   - int *a;
   - int* a;
 
-A seguir declaramos uma variável chamada intPointer que aponta para um valor do tipo inteiro:
+A seguir declaramos uma variável chama da intPointer que aponta para um valor do tipo inteiro:
 int* intPointer;
 
 Como a variável não foi inicializada, o seu conteúdo sera undefined.
