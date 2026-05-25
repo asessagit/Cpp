@@ -15,16 +15,18 @@ Este repositório existe para explorar esse controle na prática — entendendo 
 ## 📂 Estrutura do Projeto
 
 ```
-.
-├── src/              # Código-fonte dos programas
-│   ├── hello_world.cpp
-│   ├── if.cpp
-│   ├── for.cpp
-│   ├── while.cpp
-│   └── mat.cpp
-├── docs/             # Anotações e materiais de estudo
-├── legacy/           # Makefile manual (referência histórica)
-└── build/            # Saída de compilação — ignorada pelo Git
+/workspaces/c++/
+├── .devcontainer/
+├── .git/
+├── .gitignore
+├── .venv/
+├── .vscode/
+├── build/
+├── docs/
+├── legacy/
+├── src/
+├── CMakeLists.txt
+└── README.md
 ```
 
 ---
