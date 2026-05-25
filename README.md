@@ -14,7 +14,7 @@ Quer rodar agora?
 
 ```bash
 # 1. Clone o repositório
-git clone <seu-fork-aqui>
+git clone (https://github.com/asessagit/Cpp)
 cd c++
 
 # 2. Compile
