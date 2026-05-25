@@ -1,15 +1,23 @@
 {
   "name": "C++ Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/cpp:latest",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools",
-        "ms-vscode.cmake-tools"
+        "ms-vscode.cmake-tools",
+        "ms-python.python"
       ]
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gdb cmake clang-format-17"
-
+  "postCreateCommand": "apt-get update && apt-get install -y gdb git",
+  "remoteUser": "vscode"
 }
 

@@ -5,6 +5,7 @@
 *.log
 *.tmp
 *.swp
+*.swo
 *.class
 *.dll
 *.so
@@ -16,9 +17,14 @@
 # Configurações locais de IDE
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.pro.user
 
 # Pasta de build do CMake
 build/
+cmake-build-debug/
+cmake-build-release/
 
 # Pasta legacy (Makefile antigo e artefatos)
 legacy/
@@ -28,6 +34,75 @@ CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+*.cmake
+compile_commands.json
 
 # Outros temporários comuns
 *.DS_Store
+Thumbs.db
+
+# ========== ARQUIVOS CONFIDENCIAIS ==========
+
+# Variáveis de ambiente e credenciais
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.pub
+*.p12
+*.pfx
+
+# Arquivos de configuração com dados sensíveis
+config.local.h
+config.local.cpp
+config.local.json
+settings.local.*
+secrets.json
+credentials.json
+
+# Diretórios de dependências e cache
+.venv/
+venv/
+node_modules/
+.cargo/
+vcpkg_installed/
+vendor/
+third_party/dependencies/
+local_libs/
+
+# Arquivos de teste com dados sensíveis
+test_data/
+*.test.db
+*.test.json
+
+# Histórico do shell e cache de ferramentas
+.bash_history
+.zsh_history
+.history
+.ccache/
+.clang-format-cache
+
+# Arquivos de debug com informações sensíveis
+*.dSYM/
+*.su
+*.gch
+core
+core.*
+vgcore.*
+
+# Arquivos de banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Diretórios de saída e artefatos
+dist/
+release/
+output/
+artifacts/
+
+# Arquivos de usuário específicos
+.user/
+local_config/
+personal_notes.md
