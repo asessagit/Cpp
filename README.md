@@ -140,15 +140,25 @@ cd build
 ./hello_world
 ```
 
-### Opção 3: VSCode com CMake Tools (Recomendado)
+### Opção 3: VSCode com Run Task (Recomendado)
 
-1. Instale a extensão **CMake Tools** no VSCode
+1. Certifique-se de que compilou: `Ctrl+Shift+B` → `CMake: build all`
 2. Abra a paleta de comandos: `Ctrl+Shift+P` (ou `Cmd+Shift+P` no Mac)
-3. Digite: `CMake: Select a Kit` → Escolha seu compilador
-4. Digite: `CMake: Configure` → Deixe configurar
-5. Na **barra inferior azul**, clique no seletor de target
-6. Escolha o programa desejado: `hello_world`, `for`, `if`, `mat`, `vec`, `while`
-7. Clique em ▶️ **Run** ou 🐛 **Debug**
+3. Digite: `Run Task`
+4. Escolha qual programa rodar:
+   - `Run: hello_world`
+   - `Run: for`
+   - `Run: if`
+   - `Run: mat`
+   - `Run: vec`
+   - `Run: while`
+5. Pressione `Enter` — o programa executa no terminal! 🚀
+
+**Debugar programas:**
+- Abra a paleta: `Ctrl+Shift+P`
+- Digite: `Debug: Select and Start Debugging`
+- Escolha qual programa debugar (ex: `Debug: mat`)
+- Pressione `F5` ou clique em ▶️
 
 ---
 
@@ -200,7 +210,7 @@ Operações com matrizes (arrays 2D) e iteração.
 | Compilador     | g++ ou clang                   |
 | CMake          | ≥ 3.10                         |
 | Gerador        | Ninja (padrão) ou Make         |
-| VSCode Ext.    | CMake Tools, C/C++ IntelliSense |
+| VSCode Ext.    | C/C++ IntelliSense             |
 
 ---
 
