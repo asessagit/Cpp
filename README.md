@@ -149,6 +149,8 @@ Recomendado via WSL2 ou instalar `cmake` e `mingw-w64`.
 - [ ] Funções, structs e classes básicas
 - [ ] Vetores dinâmicos (`std::vector`)
 - [ ] Ponteiros inteligentes (`std::unique_ptr`, `std::shared_ptr`)
+- [ ] Orquestração com Kubernetes — deploy, Helm, e padrões para workloads distribuídos (microservices)
+- [ ] Integração com pipelines de IA usando tecnologias Intel (AMX, oneAPI) e aceleração em CPU/Gaudi-style accelerators
 
 ---
 
