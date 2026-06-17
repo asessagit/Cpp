@@ -25,8 +25,7 @@ cmake -S . -B build && cmake --build build
 
 Benefícios do Dev Container neste projeto:
 * Zero setup manual: ferramentas e extensões já configuradas no container.
-#* Isolamento total: n
-o altera o ambiente host.
+* Isolamento total: não altera o ambiente host.
 * Garantia de build: CMake, GCC/G++, Make e depuradores disponíveis.
 
 ---
