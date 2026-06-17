@@ -45,6 +45,8 @@ Esta trilha é projetada para evoluir do domínio de C++ e eficiência de hardwa
 * Uso de tecnologias abertas para acelerar IA (ex: Intel AMX, oneAPI) e reduzir vendor lock-in.
 * Arquiteturas de inferência eficientes em CPU e aceleradores alternativos.
 
+Para um resumo técnico sobre aceleradores eficientes da Intel (AMX, Gaudi, oneAPI) e impactos em consumo energético e TCO, veja docs/intel-ai.md (referência oficial: https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/enterprise-ai.html).
+
 ---
 
 ## 📂 Estrutura do Projeto
