@@ -1,38 +1,49 @@
 # 🧠 Estudos em C++ — Fundamentos e Memória
 
-[![Linguagem](https://img.shields.io/badge/linguagem-C%2B%2B-blue.svg)](https://en.cppreference.com/)
-[![CMake](https://img.shields.io/badge/build-CMake-green.svg)](https://cmake.org/)
-[![License](https://img.shields.io/badge/license-Pessoal-yellow.svg)](#licença)
+[![Linguagem](https://img.shields.io/badge/linguagem-C%2B%2B-blue.svg)](https://en.cppreference.com/) [![CMake](https://img.shields.io/badge/build-CMake-green.svg)](https://cmake.org/) [![Kubernetes](https://img.shields.io/badge/orchestration-Kubernetes-blue.svg?logo=kubernetes&logoColor=white)](https://kubernetes.io/) [![Environment](https://img.shields.io/badge/env-Dev%20Container-orange.svg?logo=visualstudiocode&logoColor=white)](#-quick-start-ambiente-isolado-) [![License](https://img.shields.io/badge/license-Pessoal-yellow.svg)](#licença)
 
-> Repositório de aprendizado focado em C++ com ênfase em controle de memória, estruturas de controle e compilação com CMake.
+> Repositório de aprendizado focado em C++ com ênfase em controle de memória, estruturas de controle e compilação modular com CMake.
 
 ---
 
-## ⚡ Quick Start (3 passos)
+## ⚡ Quick Start (Ambiente Isolado ⭐)
 
-Quer rodar agora?
+Não perca tempo configurando compiladores locais. Este repositório utiliza **Dev Containers** para criar uma estação de trabalho dockerizada e idêntica em qualquer sistema operacional, eliminando o problema do "funciona na minha máquina, mas não na sua".
 
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/asessagit/Cpp
 cd c++
 
-# 2. Compile
-cmake -B build && cmake --build build
+# 2. Reopen in Container (VSCode)
+# Ou, localmente, compile:
+cmake -S . -B build && cmake --build build
 
 # 3. Execute um programa
 ./build/hello_world
 ```
 
-**Pronto!** Veja mais exemplos na seção [🚀 Como Compilar e Executar](#-como-compilar-e-executar).
+Benefícios do Dev Container neste projeto:
+* Zero setup manual: ferramentas e extensões já configuradas no container.
+#* Isolamento total: n
+o altera o ambiente host.
+* Garantia de build: CMake, GCC/G++, Make e depuradores disponíveis.
 
 ---
 
 ## 📌 Motivação
 
-C++ oferece algo que poucas linguagens oferecem: **controle direto sobre a máquina**.
+C++ oferece algo que poucas linguagens oferecem: **controle direto sobre a máquina**. Este repositório explora esse controle na prática — desde como variáveis ocupam memória até como compiladores geram binários eficientes.
 
-Este repositório existe para explorar esse controle na prática — entendendo como variáveis ocupam memória, como o fluxo de execução funciona a nível baixo e como compiladores transformam código em binários executáveis. É um estudo deliberado, não apenas de sintaxe, mas de *como o software realmente funciona*.
+---
+
+## 🌐 Visão de Futuro: Da Base aos Sistemas Distribuídos e IA
+
+Esta trilha é projetada para evoluir do domínio de C++ e eficiência de hardware até arquiteturas distribuídas para inferência de IA escalável. Planos incluem:
+
+* Integração com orquestração (Kubernetes) para workloads distribuídos.
+* Uso de tecnologias abertas para acelerar IA (ex: Intel AMX, oneAPI) e reduzir vendor lock-in.
+* Arquiteturas de inferência eficientes em CPU e aceleradores alternativos.
 
 ---
 
@@ -40,73 +51,33 @@ Este repositório existe para explorar esse controle na prática — entendendo 
 
 ```
 c++/
-├── .devcontainer/       # Configuração do ambiente
-├── .vscode/             # Configurações do VSCode
-├── src/                 # Código fonte C++
-│   ├── hello_world.cpp
-│   ├── if.cpp
-│   ├── for.cpp
-│   ├── while.cpp
-│   ├── vec.cpp
-│   └── mat.cpp
-├── build/               # Artefatos compilados (gerado)
-├── docs/                # Documentação adicional
-├── CMakeLists.txt       # Configuração CMake
-└── README.md
+ .devcontainer/       # Configuração do ambiente
+ .vscode/             # Configurações do VSCode
+ src/                 # Código-fonte C++ estruturado
+   ├── hello_world.cpp
+   ├── if.cpp
+   ├── for.cpp
+   ├── while.cpp
+   ├── vec.cpp
+   └── mat.cpp
+ build/               # Artefatos compilados (gerado)
+ docs/                # Documentação adicional
+ CMakeLists.txt       # Configuração CMake
+ README.md
 ```
 
 ---
 
 ## 🧩 Programas Disponíveis
 
-| Programa      | Descrição                                              | Nível   |
-|---------------|--------------------------------------------------------|---------|
-| `hello_world` | Saída básica com `std::cout`                          | 🟢 Básico |
-| `if`          | Estruturas condicionais e decisão                     | 🟢 Básico |
-| `for`         | Laço `for` com iteração                               | 🟢 Básico |
-| `while`       | Laço `while` com condição                             | 🟢 Básico |
-| `vec`         | Vetores estáticos e alocação                          | 🟡 Intermediário |
-| `mat`         | Matrizes 2D e operações                               | 🟡 Intermediário |
-
----
-
-## 📥 Pré-requisitos
-
-Escolha seu sistema operacional:
-
-### Windows
-
-```bash
-# Com Chocolatey
-choco install cmake mingw-w64
-
-# Ou baixe manualmente:
-# - CMake: https://cmake.org/download/
-# - MinGW: https://www.mingw-w64.org/
-```
-
-### macOS
-
-```bash
-# Com Homebrew
-brew install cmake gcc
-```
-
-### Linux (Ubuntu/Debian)
-
-```bash
-sudo apt-get update
-sudo apt-get install -y cmake build-essential
-```
-
-### Dev Container (Recomendado ⭐)
-
-Tudo já está configurado! Basta:
-1. Instale [Docker](https://www.docker.com/products/docker-desktop)
-2. Instale a extensão [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) no VSCode
-3. Clone o repositório e abra no VSCode
-4. Clique em **"Reopen in Container"**
-5. Aguarde o build — tudo estará pronto! ✓
+| Programa      | Descrição                                              | Nível   | Foco de Engenharia |
+|---------------|--------------------------------------------------------|---------|--------------------|
+| `hello_world` | Saída básica com `std::cout`                           | 🟢 Básico | Ponto de entrada   |
+| `if`          | Estruturas condicionais e decisão                      | 🟢 Básico | Desvios condicionais |
+| `for`         | Laço `for` com iteração                                | 🟢 Básico | Iteração sequencial |
+| `while`       | Laço `while` com condição                              | 🟢 Básico | Controle de fluxo   |
+| `vec`         | Vetores estáticos e alocação                           | 🟡 Intermediário | Localidade de dados |
+| `mat`         | Matrizes 2D e operações                                | 🟡 Intermediário | Álgebra linear de baixa latência |
 
 ---
 
@@ -115,21 +86,12 @@ Tudo já está configurado! Basta:
 ### Opção 1: CMake + Make (Terminal)
 
 ```bash
-# Crie a pasta de build e configure
 mkdir build
 cd build
 cmake ..
-
-# Compile
 make
-
-# Execute um programa
-./hello_world    # Saída: Hello, World!
-./if             # Executa exemplo com if/else
-./for            # Executa loop for
-./while          # Executa loop while
-./vec            # Executa operações com vetores
-./mat            # Executa operações com matrizes
+# Execute
+./hello_world
 ```
 
 ### Opção 2: CMake (Uma linha)
@@ -142,142 +104,57 @@ cd build
 
 ### Opção 3: VSCode com Run Task (Recomendado)
 
-1. Certifique-se de que compilou: `Ctrl+Shift+B` → `CMake: build all`
-2. Abra a paleta de comandos: `Ctrl+Shift+P` (ou `Cmd+Shift+P` no Mac)
-3. Digite: `Run Task`
-4. Escolha qual programa rodar:
-   - `Run: hello_world`
-   - `Run: for`
-   - `Run: if`
-   - `Run: mat`
-   - `Run: vec`
-   - `Run: while`
-5. Pressione `Enter` — o programa executa no terminal! 🚀
-
-**Debugar programas:**
-- Abra a paleta: `Ctrl+Shift+P`
-- Digite: `Debug: Select and Start Debugging`
-- Escolha qual programa debugar (ex: `Debug: mat`)
-- Pressione `F5` ou clique em ▶️
+1. `Ctrl+Shift+B` → `CMake: build all`
+2. `Ctrl+Shift+P` → `Run Task` → escolha o executável
+3. Use `F5` para depuração
 
 ---
 
 ## 📘 Conceitos Estudados
 
-- **Saída e entrada** — `std::cout`, `std::cin`, formatação
-- **Condicionais** — `if`, `else if`, `else`, operadores lógicos
-- **Laços de repetição** — `for`, `while`, controle de fluxo
-- **Vetores e matrizes** — declaração estática, acesso, iteração
-- **Compilação com CMake** — targets, geração de binários
-- **Debug com VSCode** — breakpoints, variáveis, stepping
+- Saída e entrada — `std::cout`, `std::cin`
+- Condicionais — `if`, `else`
+- Laços — `for`, `while`
+- Vetores e matrizes — organização em memrrria e impacto no cache
+- CMake — geração de múltiplos targets
+- Debug com VSCode — breakpoints e stepping
 
 ---
 
-## 📝 Estrutura de Cada Arquivo
+## 🛠️ Pré-requisitos
 
-### hello_world.cpp
-Ponto de partida. Saída simples.
-```cpp
-#include <iostream>
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
-```
+### Linux (Ubuntu/Debian)
 
-### if.cpp
-Exemplo de estruturas condicionais e tomada de decisão.
-
-### for.cpp
-Demonstra uso de loops `for` com variações.
-
-### while.cpp
-Exemplos com loops `while` e controle por condição.
-
-### vec.cpp
-Operações com vetores (arrays 1D) e alocação estática.
-
-### mat.cpp
-Operações com matrizes (arrays 2D) e iteração.
-
----
-
-## 🛠️ Ambiente de Desenvolvimento
-
-| Ferramenta     | Versão/Info                    |
-|----------------|--------------------------------|
-| C++ Standard   | C++11 ou superior              |
-| Compilador     | g++ ou clang                   |
-| CMake          | ≥ 3.10                         |
-| Gerador        | Ninja (padrão) ou Make         |
-| VSCode Ext.    | C/C++ IntelliSense             |
-
----
-
-## ❌ Troubleshooting
-
-### "cmake: command not found"
-**Solução:** Instale CMake (veja seção [Pré-requisitos](#pré-requisitos))
-
-### "g++: command not found"
-**Solução:** Instale um compilador C++
 ```bash
-# Linux
-sudo apt-get install build-essential
-
-# macOS
-brew install gcc
+sudo apt-get update && sudo apt-get install -y cmake build-essential gdb
 ```
 
-### "Permission denied" ao executar
-**Solução:** Adicione permissão de execução
+### macOS
+
 ```bash
-chmod +x ./build/hello_world
+brew install cmake gcc
 ```
 
-### "No such file or directory: CMakeLists.txt"
-**Solução:** Execute os comandos na **raiz do projeto** (onde está o CMakeLists.txt)
-```bash
-pwd  # Verifique que está em /c++
-cmake -B build
-```
+### Windows
 
-### CMake não encontra o compilador
-**Solução:** Especifique o compilador manualmente
-```bash
-cmake -B build -DCMAKE_CXX_COMPILER=g++
-```
+Recomendado via WSL2 ou instalar `cmake` e `mingw-w64`.
 
 ---
 
 ## 🗺️ Próximos Passos
 
-Conceitos avançados planejados:
-
 - [ ] Ponteiros e aritmética de ponteiros
 - [ ] Referências e passagem por referência
-- [ ] Alocação dinâmica com `new` / `delete`
-- [ ] Funções e escopo
-- [ ] Structs e classes básicas
+- [ ] Alocação dinâmica (`new` / `delete`)
+- [ ] Funções, structs e classes básicas
 - [ ] Vetores dinâmicos (`std::vector`)
-- [ ] Herança e polimorfismo
 - [ ] Ponteiros inteligentes (`std::unique_ptr`, `std::shared_ptr`)
-
----
-
-## 🔗 Referências Úteis
-
-- **Documentação C++:** [cppreference.com](https://en.cppreference.com/)
-- **CMake Documentation:** [cmake.org](https://cmake.org/cmake/help/)
-- **Linux Mint Handbook:** [linuxmint.com](https://linuxmint.com/)
 
 ---
 
 ## 🤝 Contribuindo
 
-Este é um repositório pessoal de estudo. Para sugestões:
-- Abra uma [Issue](../../issues)
-- Discuta novas ideias
+Este é um repositório pessoal de estudo. Para sugestões: abra uma Issue.
 
 ---
 
@@ -287,5 +164,5 @@ Repositório de uso pessoal para fins de estudo. Sem licença formal.
 
 ---
 
-**Última atualização:** Maio 2026
-**Autor:** asessagit
+**Última atualização:** 2026-06-17
+**Autor:** asessagit (Alex Sessa)
