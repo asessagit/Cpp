@@ -1,6 +1,6 @@
 # Intel: Aceleradores de IA e Eficiência Energética
 
-Referência oficial: https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/enterprise-ai.html
+Referência oficial: <https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/enterprise-ai.html>
 
 Com base no portfólio de aceleradores de IA e motores de aceleração corporativa (*Enterprise AI Accelerator Engines*) detalhado pela Intel, a estratégia da empresa foca em otimizar a eficiência energética por meio de arquiteturas híbridas e dedicadas para data centers. Abaixo está um resumo técnico com explicações sobre consumo de energia, economia na geração de dados (inferência) e posicionamento frente à NVIDIA.
 
@@ -46,7 +46,7 @@ Em resumo: enquanto a NVIDIA entrega alto poder bruto, a Intel foca em oferecer 
 
 ## Leituras e referências
 
-- Intel — Enterprise AI Accelerator Engines: https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/enterprise-ai.html
+- Intel — Enterprise AI Accelerator Engines: <https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/enterprise-ai.html>
 
 ---
 
